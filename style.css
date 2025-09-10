@@ -1,0 +1,164 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 999;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: #111;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* MENU */
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: white;
+  color: #333;
+  border-radius: 5px;
+}
+
+/* SEARCH BAR */
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+/* MOBILE MENU */
+.navbar-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* SECTIONS */
+section {
+  padding: 120px 20px 60px;
+  background: #f4f4f4;
+}
+
+section:nth-child(even) {
+  background: #e2e2e2;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* SCROLL TO TOP */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
